@@ -24,10 +24,10 @@ node -e 'require("./index.js").testing()'
 IPFS has a webUI located at http://localhost:5001/webui/
 
 ### file upload and download functions
-Use the provided `_testing()` function to test and verify these features:
+Use the provided `testing()` function to test and verify these features:
 
 ```JS
-async function _testing() {
+module.exports.testing = async function testing() {
   const file = 'package.json'  // file to upload
   const ipfspath = '/encrypted/data/' + file // ipfspath
   
@@ -49,7 +49,7 @@ async function _testing() {
 }
 ```
 ### file browser
-Visit http://localhost:3000/ to see all the uploaded files. Clicking the filename will decrypt and download that file.
+Load http://localhost:3000/ to see all the uploaded files. Clicking the filename will decrypt and download that file.
 
 ### config
 You may want to change these variables in `index.js` depending on your environment:
@@ -64,7 +64,7 @@ The encryption strategy uses both RSA and AES to achieve maximum security.
 Encrypting a file for upload is done as shown on the diagram below, all of this happens in-memory.
 For very large files you may want to do this on-disk instead (e.g. using pipes).
 
-![file forward encryption](/assets/imgs/ipfs_encrypt.png?raw=true)
+![file forward encryption](./assets/imgs/ipfs_encrypt.png?raw=true)
 
 *note: The 16 byte key and 8 byte IV values are converted to hex and result in a 32 byte key and 16 byte IV as required by the AES encryption algo.*
 
