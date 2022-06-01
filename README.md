@@ -11,7 +11,7 @@ Start IPFS: `ipfs daemon`
 
 Run the following in another prompt:
 ```
-git clone https://github.com/healzer/ipfs-file-encryption.git
+git clone https://github.com/kevinhartig/ipfs-file-encryption
 cd ipfs-file-encryption
 
 npm install
