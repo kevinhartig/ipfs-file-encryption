@@ -184,7 +184,7 @@ module.exports.testing = async function testing() {
 ///////// REST API /////////////
 ////////////////////////////////
 
-const rest_port = 3000;
+const port = 3000;
 const express = require("express");
 const app = express();
 
@@ -211,7 +211,7 @@ app.get(/^\/api\/file(\/.*)$/, async (req, res, next) => {
   }
 });
 
-app.listen(rest_port, () => {
+app.listen(port, () => {
  console.log("Server running on port 3000");
 });
 

@@ -1,6 +1,6 @@
 # IPFS File Encryption in NodeJS
 
-This repo shows how to encrypt files prior to uploading them to IPFS. Similarly it can decrypt and download these files. The solution uses both RSA and AES encryption algorithms to achieve maximum security.
+This repo shows how to encrypt files prior to uploading them to IPFS. Similarly, it can decrypt and download these files. The solution uses both RSA and AES encryption algorithms to achieve maximum security.
 
 ## installation
 Download and install IPFS CLI: https://docs.ipfs.io/install/command-line/#official-distributions
