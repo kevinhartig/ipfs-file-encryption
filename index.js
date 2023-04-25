@@ -186,7 +186,14 @@ module.exports.testing = async function testing() {
 
 const port = 3000;
 const express = require("express");
+const cors = require('cors');
+
 const app = express();
+const corsOptions = {
+  origin: 'http://localhost:3000/api/files',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
